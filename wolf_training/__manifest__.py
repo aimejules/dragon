@@ -24,7 +24,11 @@
 
     # always loaded
     'data': [
+        # security
         'security/ir.model.access.csv',
+        # views
         'views/wolf_team_views.xml',
+        # report
+        'report/team_report.xml',
     ],
 }
