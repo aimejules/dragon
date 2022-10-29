@@ -30,5 +30,7 @@
         'views/wolf_team_views.xml',
         # report
         'report/team_report.xml',
+        # wizard
+        'wizard/wolf_popup_views.xml',
     ],
 }

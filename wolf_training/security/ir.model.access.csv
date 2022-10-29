@@ -1,2 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_wolf_team,wolf.team,model_wolf_team,base.group_user,1,1,1,1
+access_wolf_popup,wolf.popup,model_wolf_popup,base.group_user,1,1,1,1

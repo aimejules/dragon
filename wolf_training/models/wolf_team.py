@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api,_
 
 
 class WolfTeam(models.Model):
@@ -22,3 +22,13 @@ class WolfTeam(models.Model):
 
     def set_rew(self):
         self.state = 'new'
+
+    def open_wizard(self):
+        return {
+            'name': _('Test Window Action'),
+            'view_mode': 'form',
+            'res_model': 'wolf.popup',
+            'type': 'ir.actions.act_window',
+            'target': 'new',
+            'context': {'koto_value':'TanaProf'},
+        }
