@@ -11,4 +11,14 @@ class WolfTeam(models.Model):
     age = fields.Integer(string='Age')
     phone = fields.Char(string='Char')
     sexe = fields.Selection([('m', 'Male'), ('f', 'Female')], string='Sexe', default='m')
-    # state = fields.Selection([('new','New'),('')])
+    state = fields.Selection([('new', 'New'), ('validated', 'Validated'),
+                              ('canceled', 'Canceled')], default='new')
+
+    def set_validated(self):
+        self.state = 'validated'
+
+    def set_cancelled(self):
+        self.state = 'canceled'
+
+    def set_rew(self):
+        self.state = 'new'

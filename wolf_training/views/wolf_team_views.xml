@@ -7,6 +7,15 @@
             <field name="model">wolf.team</field>
             <field name="arch" type="xml">
                 <form string="wolf_team_form">
+                    <header>
+                        <button name="set_validated" string="Validated" class="oe_highlight" states="new"
+                                type="object"/>
+                        <button name="set_cancelled" string="Cancelled" class="oe_highlight" states="validated"
+                                type="object"/>
+                        <button name="set_rew" string="Cancelled" class="oe_highlight" states="canceled"
+                                type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="new,validated" clickable="True"/>
+                    </header>
                     <sheet>
                         <group>
                             <group>
@@ -15,7 +24,7 @@
                             </group>
                             <group>
                                 <field name="phone"/>
-                                <field name="sexe" required="1" />
+                                <field name="sexe" required="1"/>
                             </group>
                         </group>
                     </sheet>
